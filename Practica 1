@@ -1,0 +1,214 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# # PRACTICA 1
+# 
+# Tarea 1.2
+# 
+# Ejercicio 1
+
+# In[1]:
+
+
+names=['Jesus','Armando','Diego','Coutino']
+for i in names:
+    print i
+
+
+# Ejercicio 2
+
+# In[2]:
+
+
+names=['Jesus','Armando','Diego','Coutino']
+for i in names:
+    print i
+    if i=='Jesus':
+        print 'Hola, ',i,'deja de ser borracho'
+    elif i=='Armando':
+        print 'Hola, ',i,'Falta hablar del SMN'
+    elif i=='Diego':
+        print 'Hola, ',i,'me agrada tu forma de pensar'
+    else:
+        print 'Primo!,',i,'nos falta una fista destructiva'
+
+
+# Ejercicio 3
+
+# In[3]:
+
+
+Deseos=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+for i in Deseos: 
+    if i==1:
+        print 'Deseo',i,'. Acabar mi carrera'
+    elif i==2:
+        print 'Deseo',i,'. Conseguir un buen trabajo'
+    elif i==3:
+        print 'Deseo',i,'. Pasar mas tiempo con mi novia'
+    elif i==4:
+        print 'Deseo',i,'. Liberar la cartilla militar'
+    elif i==5:
+        print 'Deseo',i,'. Ser menos grocero'
+    elif i==6:
+        print 'Deseo',i,'. Aprovechar mejor mi tiempo'
+    elif i==7:
+        print 'Deseo',i,'. Comprar una computadora mas avanzada'
+    elif i==8:
+        print 'Deseo',i,'. Pasar mas tiempo con mi familia'
+    elif i==9:
+        print 'Deseo',i,'. Salir con un buen promedio en el semestre'
+    elif i==10:
+        print 'Deseo',i,'. Comprar una mejor consola de videojuegos'
+    elif i==11:
+        print 'Deseo',i,'. Tener un celular mas reciente'
+    elif i==12:
+        print 'Deseo',i,'. Dejar de tomar mucho'
+    elif i==13:
+        print 'Deseo',i,'. Aprender a redactar'
+    elif i==14:
+        print 'Deseo',i,'. Aprovar Programacion Avanazada'
+    else:
+        print 'Deseo',i,'. Viejar mas'
+
+
+# Tarea 3.4
+# 
+# Ejercicio 1
+
+# In[9]:
+
+
+def make_shirt(size_shirt, text_shirt):
+    print ('El tanano de la playera es: '+size_shirt+'.')
+    print ('El texto que se va a imprimir en la playera es: "'+ text_shirt+'".')
+
+print 'Introdusca el tamaño de la playera:'
+size=raw_input()
+print 'Introdusca el texto que quiere en la playera en:'
+text=raw_input()
+make_shirt(size, text)
+
+
+# Ejercicio 2
+
+# In[10]:
+
+
+def make_shirt(size_shirt='Grande', text_shirt='I <3 Python'):
+    print ('El tanano de la playera es: '+size_shirt+'.')
+    print ('El texto que se va a imprimir en la playera es: "'+ text_shirt+'".')
+make_shirt()
+make_shirt('Mediana',)
+make_shirt('Pequeña','I hate Python')
+
+
+# Ejercicio 3
+
+# In[11]:
+
+
+def Discribe_city(city, country='Mexico'):
+    print (city+' esta en '+country)
+Discribe_city('Edo. Mex')
+Discribe_city('Sou Paulo','Brasil')
+Discribe_city('Guanajuato')
+
+
+# Tarea 4.2
+# 
+# Ejercicio 1
+
+# In[12]:
+
+
+class Restaurant():
+    def __init__(self, restaurant_name, cuisine_type):
+        self.restaurant_name=restaurant_name
+        self.cuisine_type=cuisine_type
+    def describe_restaurant(self):
+        print('El restaurant "'+self.restaurant_name.title()+'" vende comida '+self.cuisine_type.title())
+    def open_restaurant(self):
+        print('El restaurant "'+self.restaurant_name.title()+'" esta abierto')
+print 'Nombre del restaurant:'
+restaurant_name= raw_input()
+print 'Tipo de comida'
+cuisine_type= raw_input()
+my_restaurant=Restaurant(restaurant_name, cuisine_type)
+my_restaurant.describe_restaurant()
+my_restaurant.open_restaurant()
+
+
+# Ejercicio 2
+
+# In[13]:
+
+
+class Restaurant():
+    def __init__(self, restaurant_name, cuisine_type):
+        self.restaurant_name=restaurant_name
+        self.cuisine_type=cuisine_type
+    def describe_restaurant(self):
+        print('El restaurant "'+self.restaurant_name.title()+'" vende comida '+self.cuisine_type.title())
+    def open_restaurant(self):
+        print('El restaurant "'+self.restaurant_name.title()+'" esta abierto')
+my_restaurant=Restaurant('Mucho Tako', 'Mexicana')
+my_restaurant.describe_restaurant()
+my_restaurant.open_restaurant()
+my_restaurant=Restaurant('Shinobi', 'China')
+my_restaurant.describe_restaurant()
+my_restaurant.open_restaurant()
+my_restaurant=Restaurant('Romanoff', 'Rusa')
+my_restaurant.describe_restaurant()
+my_restaurant.open_restaurant()
+
+
+# Ejercicio 3
+
+# In[14]:
+
+
+class User():
+    def __init__(self, first_name, last_name, age, country, job, email, password):
+        self.first_name=first_name
+        self.last_name=last_name
+        self.age=age
+        self.country=country
+        self.job=job
+        self.email=email
+        self.password=password
+    def discribe_user(self):
+        print ('Nombre del usuario: '+self.first_name+'\nApellido del usuario: '+self.last_name+'\nEdad: '+self.age+'\nPais: '+self.country+'\nOcupacion: '+self.job+'\nCorreo Electronico: '+self.email+'\nContraseña:'+self.password)
+    def greet_user(self):
+        print ('Hola, '+self.first_name+' te damos las gracias por registarte en este sitio')
+my_user1=User('Juan','Guerrero','27','Mexico','Obrero','jua34n@ganil.com','JaUnsk')
+my_user1.discribe_user()
+my_user1.greet_user()
+my_user2=User('Marco','De Jesus','19','Peru','Maestro','mar35lao@ganil.com','safvv34')
+my_user2.discribe_user()
+my_user2.greet_user()
+my_user3=User('Iker','Villega','30','Mexico','Chofer','villega999@ganil.com','4gsrrt56')
+my_user3.discribe_user()
+my_user3.greet_user()
+my_user4=User('Natali','Mejia','18','Mexico','Recepcionesta','nat78.mja@ganil.com','ac424dv4')
+my_user4.discribe_user()
+my_user4.greet_user()
+my_user5=User('Yesica','Gonzales','20','Mexico','Empresaria','ysesi.gonz@ganil.com','335ffheaa')
+my_user5.discribe_user()
+my_user5.greet_user()
+my_user6=User('Daniel','Marquez','26','Belice','Plomero','marq3z89@ganil.com','irtaglgdvzn')
+my_user6.discribe_user()
+my_user6.greet_user()
+my_user7=User('Pedro','Lopez','27','Mexico','Doctor','p3dr0@ganil.com','iolgup980')
+my_user7.discribe_user()
+my_user7.greet_user()
+my_user8=User('Manuel','Fonseca','17','Argentina','Actor','m63426@ganil.com','q1xsfe')
+my_user8.discribe_user()
+my_user8.greet_user()
+my_user9=User('Andrea','Aguilar','29','Colombia','Abogada','antrgilar@ganil.com','adc3va')
+my_user9.discribe_user()
+my_user9.greet_user()
+my_user10=User('Laura','Castro','22','Mexico','Cantante','laure@ganil.com','laufcwx22')
+my_user10.discribe_user()
+my_user10.greet_user()
+
